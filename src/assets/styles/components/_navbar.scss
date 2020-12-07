@@ -1,0 +1,59 @@
+@import '../variables/colors';
+
+$color-selector-width: 2rem;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background-color: $dark-bg;
+  border-bottom: 1px solid $main-border;
+  box-shadow: 0 0 4px 0 $black;
+
+  /*Versión de escritorio*/
+  @media screen and (min-width: 1024px) {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  /*Selectores de color*/
+  &-color-selector {
+    display: flex;
+  }
+
+  .color-selector {
+    width: $color-selector-width;
+    height: $color-selector-width;
+    margin: 0 .5rem;
+    border: 3px solid $yellow;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.main {
+      background-color: $dark-bg;
+    }
+
+    &.green {
+      background-color: $green-dark-bg;
+    }
+
+    &.red {
+      background-color: $red-dark-bg;
+    }
+  }
+
+  /*Colores de la aplicación*/
+  .green & {
+    background-color: $green-dark-bg;
+    border-bottom: 1px solid $green-border;
+  }
+  .red & {
+    background-color: $red-dark-bg;
+    border-bottom: 1px solid $red-border;
+  }
+}

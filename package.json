@@ -1,0 +1,43 @@
+{
+  "name": "m4.257-pec1",
+  "version": "1.0.0",
+  "description": "PEC 1, asignatura 'Herramientas HTML y CSS 1'",
+  "main": "./src/views/index.html",
+  "scripts": {
+    "parcel:dev": "parcel src/views/index.html -p 8123 --open",
+    "parcel:build": "parcel build src/views/index.html --public-url ./ --out-dir dist --no-source-maps --no-cache",
+    "clean": "rimraf dist .cache .cache-loader",
+    "dev": "npm-run-all clean parcel:dev",
+    "build": "npm-run-all clean stylelint parcel:build",
+    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
+    "stylelint": "stylelint src/**/*.scss --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BorjaDM26/M4.257-PEC1.git"
+  },
+  "author": {
+    "name": "Borja Delgado Martín",
+    "email": "borjadm.26@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BorjaDM26/M4.257-PEC1/issues"
+  },
+  "homepage": "https://github.com/BorjaDM26/M4.257-PEC1#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.2",
+    "sass": "^1.29.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
+  }
+}

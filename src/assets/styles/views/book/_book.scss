@@ -1,0 +1,104 @@
+@import '../../variables/colors';
+
+.technical-sheet {
+  padding: 0 1rem;
+  background-color: $dark-bg;
+  border-bottom: 1px solid $main-border;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 $black;
+
+  & ul {
+    padding-left: 0;
+    list-style: none;
+
+    & ul {
+      padding-left: 1rem;
+    }
+  }
+
+  & li {
+    padding: .2rem 0;
+  }
+
+  & > ul > li > p {
+    width: 100%;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+  }
+
+  /*Colores de la aplicación*/
+  .green & {
+    background-color: $green-dark-bg;
+    border-bottom: 1px solid $green-border;
+  }
+  .red & {
+    background-color: $red-dark-bg;
+    border-bottom: 1px solid $red-border;
+  }
+}
+
+/*Versión de escritorio*/
+@media screen and (min-width: 1024px) {
+  .technical-sheet {
+    flex: 1 0 30%;
+    box-sizing: border-box;
+    padding: 0 2rem;
+  }
+}
+
+.book {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &-cover {
+    text-align: center;
+
+    &-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &-info p {
+    width: 100%;
+    margin: .5rem 0;
+    line-height: 1.8;
+  }
+}
+
+/*Versión de escritorio*/
+@media screen and (min-width: 1024px) {
+  .book {
+    display: flex;
+    flex-wrap: wrap;
+
+    & h2 {
+      flex: 0 0 100%;
+      text-align: left;
+    }
+
+    &-info {
+      flex: 1 0 70%;
+      box-sizing: border-box;
+      padding-left: 4rem;
+
+      & p {
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.author-info {
+  display: block;
+
+  & img {
+    float: left;
+    max-width: 200px;
+    margin-right: 2rem;
+    border-radius: 50%;
+    -webkit-shape-outside: circle();
+    shape-outside: circle();
+  }
+}

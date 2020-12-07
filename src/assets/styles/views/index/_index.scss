@@ -1,0 +1,26 @@
+.index-text-section {
+  display: flex;
+  justify-content: center;
+
+  & p {
+    width: 60%;
+  }
+}
+
+.index-categories-section {
+  display: flex;
+  justify-content: center;
+}
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+
+  & li {
+    max-width: 180px;
+    padding: .5rem 2rem;
+  }
+}

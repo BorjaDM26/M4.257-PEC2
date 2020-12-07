@@ -1,0 +1,14 @@
+@import '../variables/colors';
+
+.breadcrumb a {
+  &.active {
+    color: $gray-darkest;
+    pointer-events: none;
+  }
+
+  &:not(.active)::after {
+    padding: 0 .5rem;
+    content: '/';
+    pointer-events: none;
+  }
+}

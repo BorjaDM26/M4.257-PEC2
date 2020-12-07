@@ -1,0 +1,33 @@
+// /**
+//  * Import variables
+//  */
+@import 'variables/variables';
+
+// /**
+//  * Import npm dependencies
+//  * see: https://en.parceljs.org/module_resolution.html
+//  * see commented examples below
+//  */
+
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+
+// /**
+//  * Import functions and mixins
+//  */
+@import 'mixins/mixins';
+@import 'functions/functions';
+
+// /**
+//  * Import components and layouts
+//  * It's a best practice to use a partial for each page
+//  */
+@import 'components/components';
+@import 'modifiers/modifiers';
+@import 'views/views';
+
+// /**
+//  * Do NOT include anything else in this file!
+//  */
