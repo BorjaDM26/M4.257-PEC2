@@ -1,0 +1,3 @@
+@function low-breakpoint($breakpoint) {
+  @return calc(#{$breakpoint} - 1px);
+}

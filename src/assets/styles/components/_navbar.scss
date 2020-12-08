@@ -1,4 +1,5 @@
 @import '../variables/colors';
+@import '../variables/breakpoints';
 
 $color-selector-width: 2rem;
 
@@ -12,7 +13,7 @@ $color-selector-width: 2rem;
   box-shadow: 0 0 4px 0 $black;
 
   /*Versión de escritorio*/
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $lg) {
     padding-right: 10%;
     padding-left: 10%;
   }
@@ -44,6 +45,15 @@ $color-selector-width: 2rem;
 
     &.red {
       background-color: $red-dark-bg;
+    }
+
+    @media screen and (max-width: $sm) {
+      $color-selector-width-small: calc(
+        #{$color-selector-width} - .5rem
+      );
+
+      width: $color-selector-width-small;
+      height: $color-selector-width-small;
     }
   }
 

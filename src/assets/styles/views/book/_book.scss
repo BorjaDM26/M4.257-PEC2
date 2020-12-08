@@ -1,4 +1,6 @@
 @import '../../variables/colors';
+@import '../../variables/breakpoints';
+@import '../../functions/functions';
 
 .technical-sheet {
   padding: 0 1rem;
@@ -8,19 +10,15 @@
   box-shadow: 0 0 4px 0 $black;
 
   & ul {
-    padding-left: 0;
+    padding-left: 1rem;
     list-style: none;
-
-    & ul {
-      padding-left: 1rem;
-    }
   }
 
   & li {
     padding: .2rem 0;
   }
 
-  & > ul > li > p {
+  & > div > p {
     width: 100%;
     font-weight: 700;
     border-bottom: 1px solid black;
@@ -38,11 +36,48 @@
 }
 
 /*Versión de escritorio*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $xl) {
   .technical-sheet {
     flex: 1 0 30%;
     box-sizing: border-box;
     padding: 0 2rem;
+  }
+
+  .book-cover {
+    max-width: 250px;
+
+    &-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    & img {
+      max-width: 100%;
+    }
+  }
+}
+
+/*Versión de tablet*/
+@media screen and (min-width: $md) and (max-width: low-breakpoint($xl)) {
+  .technical-sheet {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+
+    h3 {
+      flex-basis: 100%;
+      text-align: center;
+    }
+
+    .book-cover {
+      flex-basis: 50%;
+    }
+
+    .book-info {
+      flex-basis: 50%;
+      box-sizing: border-box;
+      padding: 0 1rem;
+    }
   }
 }
 
@@ -52,6 +87,7 @@
   justify-content: center;
 
   &-cover {
+    max-width: 100%;
     text-align: center;
 
     &-container {
@@ -60,15 +96,23 @@
     }
   }
 
-  &-info p {
+  &-summary p {
     width: 100%;
     margin: .5rem 0;
     line-height: 1.8;
   }
+
+  &-svg {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-height: 160px;
+    padding: 1rem;
+  }
 }
 
 /*Versión de escritorio*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $xl) {
   .book {
     display: flex;
     flex-wrap: wrap;
@@ -78,7 +122,7 @@
       text-align: left;
     }
 
-    &-info {
+    &-summary {
       flex: 1 0 70%;
       box-sizing: border-box;
       padding-left: 4rem;

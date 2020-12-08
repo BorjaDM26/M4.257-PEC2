@@ -1,14 +1,47 @@
 @import '../variables/colors';
+@import '../variables/breakpoints';
+@import '../functions/functions';
 
 .footer {
+  display: flex;
+  flex-wrap: wrap;
   padding: 1rem 2rem;
   background-color: $dark-bg;
   box-shadow: 0 0 2px 0 $black;
 
-  &-first-row {
+  // Columns
+  &-left,
+  &-right,
+  &-center {
     display: flex;
+    flex: 1 1 33.33%;
+    flex-direction: column;
+  }
+
+  &-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Sections
+  &-title {
+    display: flex;
+  }
+
+  &-image {
+    max-width: 200px;
+    transition: clip-path .5s;
+    clip-path: circle(35%);
+
+    &:hover {
+      clip-path: circle(60%);
+    }
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   &-links a {
@@ -17,24 +50,22 @@
   }
 
   &-copy {
-    margin: 0;
-    font-weight: bold;
-  }
-
-  &-second-row p {
-    margin-bottom: .5rem;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: .75rem;
     font-weight: bold;
   }
 
   &-resources {
-    margin: .5rem 0;
-    list-style: disclosure-closed;
-  }
+    p {
+      margin-bottom: .5rem;
+      font-weight: bold;
+    }
 
-  /*Versión de escritorio*/
-  @media screen and (min-width: 1024px) {
-    padding-right: 10%;
-    padding-left: 10%;
+    &-list {
+      margin: .5rem 0;
+      list-style: disclosure-closed;
+    }
   }
 
   /*Colores de la aplicación*/
@@ -43,5 +74,26 @@
   }
   .red & {
     background-color: $red-dark-bg;
+  }
+
+  /*Versión de escritorio*/
+  @media screen and (min-width: $lg) {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  /*Versión de móvil*/
+  @media screen and (max-width: low-breakpoint($md)) {
+    // Columns
+    &-left,
+    &-right,
+    &-center {
+      flex-basis: 100%;
+      align-items: center;
+    }
+
+    &-links {
+      align-items: center;
+    }
   }
 }

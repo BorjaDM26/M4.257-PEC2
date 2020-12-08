@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/main.scss">
-    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="shortcut icon" href="../assets/images/logo.svg">
     <title>Misery (Stephen King) - El Lector</title>
   </head>
 <body class="main">
   <nav class="navbar">
-    <a href="index.html" class="nav-logo">
-      <img src="../assets/images/logo.png" alt="Logo de El Lector" />
+    <a href="index.html" class="main-title">
+      <img class="main-title-logo" src="../assets/images/logo.svg" alt="Logo de El Lector" />
+      <h1 class="main-title-text">El Lector</h1>
     </a>
     <div class="navbar-color-selector">
       <div class="color-selector main"></div>
@@ -22,7 +23,7 @@
 
   <main>
     <div class="breadcrumb">
-      <a href="./index.html"><i class="fas fa-home"></i> Inicio</a>
+      <a href="./index.html"><span class="fas fa-home"></span> Inicio</a>
       <a href="./categories-thriller.html">Thriller</a>
       <a href="./book-misery.html" class="active">Misery</a>
     </div>
@@ -32,25 +33,29 @@
 
       <div class="technical-sheet">
         <h3>Ficha técnica</h3>
+
         <div class="book-cover-container">
-          <img src="../assets/images/books/misery-big.jpg" alt="Portada del libro Misery" class="book-cover" />
+          <picture class="book-cover">
+            <source media="(max-width: 767px)" srcset="../assets/images/books/misery-cover-sm.jpg">
+            <source media="(max-width: 1199px)" srcset="../assets/images/books/misery-cover-md.jpg">
+            <source media="(min-width: 1200px)" srcset="../assets/images/books/misery-cover-lg.jpg">
+            <img src="../assets/images/books/misery-cover-lg.jpg" alt="Portada del libro Misery">
+          </picture>
         </div>
 
-        <ul>
-          <li>
-            <p>Datos de la obra</p>
-            <ul>
-              <li><span class="bold">Título</span>: Misery</li>
-              <li><span class="bold">Autor</span>: Stephen King</li>
-              <li><span class="bold">País</span>: Estados Unidos</li>
-              <li><span class="bold">Género</span>: Thriller</li>
-              <li><span class="bold">Fecha de publicación</span>: <time datetime="1987-06-08">8 de junio de 1987</time></li>
-            </ul>
-          </li>
-        </ul>
+        <div class="book-info">
+          <p>Datos de la obra</p>
+          <ul>
+            <li><span class="bold">Título</span>: Misery</li>
+            <li><span class="bold">Autor</span>: Stephen King</li>
+            <li><span class="bold">País</span>: Estados Unidos</li>
+            <li><span class="bold">Género</span>: Thriller</li>
+            <li><span class="bold">Fecha de publicación</span>: <time datetime="1987-06-08">8 de junio de 1987</time></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="book-info">
+      <div class="book-summary">
         <section>
           <h3>Sobre la obra</h3>
           <p>Paul Sheldon es un novelista de éxito que finalmente ha conocido a su mayor fan. Se llama Annie Wilkes y es
@@ -58,7 +63,11 @@
              de coche. Pero también es su captor, manteniéndolo prisionero en su aislada casa.</p>
           <p>Ahora Annie quiere que Paul escriba su mejor trabajo, sólo para ella. Ella tiene muchas maneras de estimularlo. 
              Una es una aguja. Otra es un hacha. Y si no funcionan, ella puede ponerse muy desagradable... </p>
-          
+          <div class="book-svg">
+            <object type="image/svg+xml" data="../assets/images/books/misery-book.svg">
+              <img src="../assets/images/books/misery-book.svg" alt="Imagen de un libro con animación" />
+            </object>
+          </div>
         </section>
 
         <section class="author-info">
@@ -78,25 +87,39 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-first-row">
+    <div class="footer-left">
+      <div class="footer-title">
+        <a href="index.html" class="main-title">
+          <img class="main-title-logo" src="../assets/images/logo.svg" alt="Logo de El Lector" />
+          <span class="main-title-text">El Lector</span>
+        </a>
+      </div>
       <div class="footer-links">
         <a href="">Sobre nosotros</a>
         <a href="">Aviso legal</a>
         <a href="">Política de privacidad</a>
       </div>
+    </div>
+    <div class="footer-center">
+      <img class="footer-image" src="../assets/images/library.jpg" alt="Imagen de una librería" />
+    </div>
+    <div class="footer-right">
+      <div class="footer-resources">
+        <p>Recursos externos</p>
+        <ul class="footer-resources-list">
+          <li><a href="https://www.freelogodesign.org/">Logo</a></li>
+          <li><a href="https://search.creativecommons.org/photos/04d57e3f-6d36-49f9-8e1e-7de9d72c202e">Imagen de librería (footer)</a></li>
+          <li><a href="https://openlibrary.org/books/OL24214124M/Misery">Misery</a></li>
+          <li><a href="https://es.wikipedia.org/wiki/Stephen_King">Stephen King</a></li>
+          <li><a href="https://freesvg.org/black-book-with-many-pages">Imagen de libro cerrado</a></li>
+          <li><a href="https://freesvg.org/black-and-white-open-book-vector-clip-art">Imagen de libro abierto</a></li>
+        </ul>
+      </div>
       <p class="footer-copy">
-        <i class="far fa-copyright"></i> 
+        <span class="far fa-copyright"></span> 
         <time datetime="2020">2020</time> 
         Borja Delgado Martín
       </p>
-    </div>
-    <div class="footer-second-row">
-      <p>Recursos externos</p>
-      <ul class="footer-resources">
-        <li><a href="https://www.freelogodesign.org/">Logo</a></li>
-        <li><a href="https://openlibrary.org/books/OL24214124M/Misery">Misery</a></li>
-        <li><a href="https://es.wikipedia.org/wiki/Stephen_King">Stephen King</a></li>
-      </ul>
     </div>
   </footer>
 

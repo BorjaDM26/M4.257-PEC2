@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/main.scss">
-    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="shortcut icon" href="../assets/images/logo.svg">
     <title>Categoría juvenil - El Lector</title>
   </head>
   <body class="main">
     <nav class="navbar">
-      <a href="index.html" class="nav-logo">
-        <img src="../assets/images/logo.png" alt="Logo de El Lector" />
+      <a href="index.html" class="main-title">
+        <img class="main-title-logo" src="../assets/images/logo.svg" alt="Logo de El Lector" />
+        <h1 class="main-title-text">El Lector</h1>
       </a>
       <div class="navbar-color-selector">
         <div class="color-selector main"></div>
@@ -22,7 +23,7 @@
 
     <main>
       <div class="breadcrumb">
-        <a href="./index.html"><i class="fas fa-home"></i> Inicio</a>
+        <a href="./index.html"><span class="fas fa-home"></span> Inicio</a>
         <a href="./categories-juvenile.html" class="active">Juvenil</a>
       </div>
 
@@ -41,14 +42,14 @@
         <ul id="categoriesList" class="categories-list">
           <li>
             <a href="./book-alice.html" class="card">
-              <img src="../assets/images/books/alice.jpg" alt="Portada del libro Alicia en el País de las Maravillas" class="card-img" />
+              <img src="../assets/images/books/alice-cover-sm.jpg" alt="Portada del libro Alicia en el País de las Maravillas" class="card-img" />
               <p class="card-title">Alicia en el País de las Maravillas</p>
               <p class="card-subtitle">Lewis Carrol</p>
             </a>
           </li>
           <li>
             <a href="./book-moby-dick.html" class="card">
-              <img src="../assets/images/books/moby-dick.jpg" alt="Portada del libro Moby Dick" class="card-img" />
+              <img src="../assets/images/books/moby-dick-cover-sm.jpg" alt="Portada del libro Moby Dick" class="card-img" />
               <p class="card-title">Moby Dick</p>
               <p class="card-subtitle">Herman Melville</p>
             </a>
@@ -58,25 +59,37 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-first-row">
+      <div class="footer-left">
+        <div class="footer-title">
+          <a href="index.html" class="main-title">
+            <img class="main-title-logo" src="../assets/images/logo.svg" alt="Logo de El Lector" />
+            <span class="main-title-text">El Lector</span>
+          </a>
+        </div>
         <div class="footer-links">
           <a href="">Sobre nosotros</a>
           <a href="">Aviso legal</a>
           <a href="">Política de privacidad</a>
         </div>
+      </div>
+      <div class="footer-center">
+        <img class="footer-image" src="../assets/images/library.jpg" alt="Imagen de una librería" />
+      </div>
+      <div class="footer-right">
+        <div class="footer-resources">
+          <p>Recursos externos</p>
+          <ul class="footer-resources-list">
+            <li><a href="https://www.freelogodesign.org/">Logo</a></li>
+            <li><a href="https://search.creativecommons.org/photos/04d57e3f-6d36-49f9-8e1e-7de9d72c202e">Imagen de librería (footer)</a></li>
+            <li><a href="https://openlibrary.org/books/OL24371078M/Alice's_Adventures_in_Wonderland">Alicia en el País de las Maravillas</a></li>
+            <li><a href="https://openlibrary.org/works/OL102749W/Moby_Dick">Moby Dick</a></li>
+          </ul>
+        </div>
         <p class="footer-copy">
-          <i class="far fa-copyright"></i> 
+          <span class="far fa-copyright"></span> 
           <time datetime="2020">2020</time> 
           Borja Delgado Martín
         </p>
-      </div>
-      <div class="footer-second-row">
-        <p>Recursos externos</p>
-        <ul class="footer-resources">
-          <li><a href="https://www.freelogodesign.org/">Logo</a></li>
-          <li><a href="https://openlibrary.org/works/OL13101191W/Alice_in_Wonderland!">Alicia en el País de las Maravillas</a></li>
-          <li><a href="https://openlibrary.org/works/OL102749W/Moby_Dick">Moby Dick</a></li>
-        </ul>
       </div>
     </footer>
 
