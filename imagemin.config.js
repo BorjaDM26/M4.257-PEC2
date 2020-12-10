@@ -5,7 +5,8 @@ module.exports = {
   "svgo": {
     "plugins": [
       { "removeViewBox": false },
-      { "cleanupIDs": true },
+      { "cleanupIDs": false },
+      { "inlineStyles": false },
     ]
   },
   "webp": { "quality": 10 }
